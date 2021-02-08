@@ -1,0 +1,12 @@
+$ToastColor: #d35400;
+
+div[class='example1'] {
+    border: 2px solid $ToastColor;
+    border-radius: 20px;
+}
+
+div {
+    h1[class='example2'] {
+    color: $ToastColor;
+    }
+}
