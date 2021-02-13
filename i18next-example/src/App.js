@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import "./App.scss";
 import Language from "./components/i18/Language";
@@ -12,7 +12,7 @@ import DarkMode from "./components/darkModeToggle/darkMode";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme/theme";
 import { GlobalStyles } from "./theme/global";
-import Debounce from "./components/debounce/Debounce";
+import TinyMCE from "./components/tinyMCE/TinyMCE";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -49,7 +49,7 @@ function App() {
             <DarkMode theme={theme} setTheme={setTheme} />
           </div>
           <div>
-            <Debounce />
+            <TinyMCE />
           </div>
         </div>
       </>
