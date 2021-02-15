@@ -8,3 +8,4 @@
 - googleTranslate
 - darkMode w/ styled components
 - live search w/ debounce
+- tinyMCE Editor
