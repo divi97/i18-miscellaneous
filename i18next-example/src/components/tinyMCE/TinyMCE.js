@@ -10,7 +10,7 @@ class TinyMCE extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ margin: "10px" }}>
         <Editor
           initialValue="<p>Create Slides here, start typing.....</p>"
           init={{
