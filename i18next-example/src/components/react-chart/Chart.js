@@ -1,6 +1,8 @@
 import React from 'react'
 import { Line, Bar, Doughnut } from 'react-chartjs-2'
-
+// .canvas-container {
+    // use this class in media query to make chart component responsive
+// }
 
 function Chart() {
 
@@ -20,7 +22,7 @@ function Chart() {
             borderColor: '#e74c3c',
             backgroundColor: '#ff7979',
             pointBackgroundColor: '#d35400',
-            pointBorderColor: '#c0392b'
+            pointBorderColor: '#c0392b',
         },
         {
             label: 'Sales for 2019 (M)',
@@ -29,30 +31,75 @@ function Chart() {
             backgroundColor: '#7ed6df',
             pointBackgroundColor: '#22a6b3',
             pointBorderColor: '#2980b9'
-        }]
+        }
+    ]
 
     }
 
     const optionsLine = {
+        // instances: {
+        //     responsive: true,
+        //     maintainAspectRatio:true,
+        // },
+        responsive: true,
+            maintainAspectRatio:true,
         title: {
             display: true,
-            text: 'Line Chart'
+            text: 'Line Chart',
+            fontColor: "#000"
         },
         scales: {
             yAxes: [
                 {
+                    gridLines: {
+                        offset:true,
+                        offsetGridLines: true,
+                        display: true ,
+                        color: "#000",
+                        zeroLineColor: "red"
+                    },
                     ticks: {
+                        fontColor: "#000",
+                        fontSize: 12,
                         min: 0,
                         max: 6,
                         stepSizep: 1
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Sales value',
+                        fontColor:'#000000',
+                        fontSize:12
                     }
                 }
+            ],
+            xAxes: [{
+                gridLines: {
+                    offset:true,
+                    offsetGridLines: true,
+                    display: true,
+                    color: "#000",
+                    zeroLineColor: "red"
+                },
+                ticks: {
+                    fontColor:"#000"
+                },
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Months',
+                    fontColor:'#000000',
+                    fontSize:12
+                }}
             ]
         },
         legend: {
             position: "top",
             align: "center",
-        }
+            fontColor:"#000"
+        },
+        // tooltip: {
+
+        // }
     }
 
     const dataDoughnut = {

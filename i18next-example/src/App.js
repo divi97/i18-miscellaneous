@@ -13,6 +13,7 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./theme/theme";
 import { GlobalStyles } from "./theme/global";
 import TinyMCE from "./components/tinyMCE/TinyMCE";
+import VideoTag from "./components/video/VideoTag";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -50,6 +51,9 @@ function App() {
           </div>
           <div>
             <TinyMCE />
+          </div>
+          <div>
+            <VideoTag />
           </div>
         </div>
       </>
