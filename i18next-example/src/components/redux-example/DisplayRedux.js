@@ -18,7 +18,7 @@ function DisplayRedux({ GetName, GetValue, name, value }) {
       Redux output fetched from backend will be displayed here:
       <br />
       <div className="container">
-        <table className="table-setting">
+        <table className="table-setting" style={{margin: 'auto'}}>
           <thead>
             <tr>
               <td>Name</td>
